@@ -8,6 +8,8 @@ import android.widget.TextView;
 public class SegundaActivity extends AppCompatActivity {
     private TextView textNome;
     private TextView textIdade;
+    private TextView textLogin;
+    private TextView textMail;
 
 
     @Override
@@ -17,15 +19,20 @@ public class SegundaActivity extends AppCompatActivity {
 
         textNome = findViewById(R.id.textNome);
         textIdade = findViewById(R.id.textIdade);
+        textLogin = findViewById(R.id.textLogin);
+        textMail = findViewById(R.id.textMail);
 
-        //recuperar dados enviados
+        //Recuperar dados enviados
 
-       Bundle dados = getIntent().getExtras();
+        Bundle dados = getIntent().getExtras();
         String nome = dados.getString("nome");
         int idade = dados.getInt("idade");
+        Usuario usuario = (Usuario)dados.getSerializable("objeto");
 
         textNome.setText(nome);
         textIdade.setText(String.valueOf(idade));
+        textLogin.setText(usuario.getLogin());
+        textMail.setText(usuario.getMail());
 
     }
 }
