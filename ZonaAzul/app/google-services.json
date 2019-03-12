@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "849788492840",
+    "firebase_url": "https://zonaazul-23c68.firebaseio.com",
+    "project_id": "zonaazul-23c68",
+    "storage_bucket": "zonaazul-23c68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849788492840:android:3f9c75fbcc9eb42c",
+        "android_client_info": {
+          "package_name": "com.cgparking.zonaazul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849788492840-vmdi69g2deaus930u1fcqgahcpsm01re.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cgparking.zonaazul",
+            "certificate_hash": "5372394848731023aae82d7e61cb9f9f0ac7a289"
+          }
+        },
+        {
+          "client_id": "849788492840-6epa1aovdlg4t8fkh2k70g4se89i3t3i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlTcaQ2Z7KcPO115cEsrtg2XGNLbyDh4w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849788492840-6epa1aovdlg4t8fkh2k70g4se89i3t3i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

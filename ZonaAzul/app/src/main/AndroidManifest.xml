@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.cgparking.zonaazul">
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -13,11 +14,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LerQRCodeActivity"></activity>
+        <activity
+            android:name=".activity.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cgparking.zonaazul.activity.MainActivity" />
+        </activity>
+
+        <!-- Login -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_login"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cgparking.zonaazul.activity.MainActivity" />
+        </activity>
+
+        <activity android:name=".activity.LerQRCodeActivity" />
         <activity android:name=".activity.CarteiraActivity" />
         <activity android:name=".activity.CadastrarCartaoActivity" />
-        <activity android:name=".activity.CadastrarUsuarioActivity" />
-        <activity android:name=".activity.MainActivity" /> <!-- Modificação de Maelson -->
+
+        <!-- cadastro -->
+                <activity android:name=".activity.CadastrarUsuarioActivity"
+                    android:label="@string/title_cadastro"
+                    android:parentActivityName=".activity.MainActivity">
+                    <meta-data
+                        android:name="android.support.PARENT_ACTIVITY"
+                        android:value="com.cgparking.zonaazul.activity.MainActivity" />
+                </activity>
+
+
+                <activity android:name=".activity.MapsActivity" /> <!-- Modificação de Maelson -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -34,8 +64,8 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activity.MapsActivity"
-            android:label="@string/title_activity_maps">
+            android:name=".activity.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
