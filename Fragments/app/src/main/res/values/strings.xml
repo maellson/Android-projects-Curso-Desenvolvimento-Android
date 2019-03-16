@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fragments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="conversa_fragment">Conversas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Contato_fragment">Contatos</string>
+</resources>

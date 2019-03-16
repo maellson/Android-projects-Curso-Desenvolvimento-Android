@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "849788492840-vmdi69g2deaus930u1fcqgahcpsm01re.apps.googleusercontent.com",
+          "client_id": "849788492840-asplpgmbm37kqof7f56c8uoff5mdpkle.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.cgparking.zonaazul",
-            "certificate_hash": "5372394848731023aae82d7e61cb9f9f0ac7a289"
+            "certificate_hash": "8194e00a17208c43ce312d005c06e51e9335a396"
           }
         },
         {

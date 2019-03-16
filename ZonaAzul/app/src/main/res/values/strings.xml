@@ -14,11 +14,32 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <!-- Tela Inicial-->
+    <string name="btn_login_main">LOGIN</string>
+    <string name="btn_cadastrar_main">CADASTRAR</string>
+
+    <!-- Titulos-->
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_login">Login</string>
-    <string name="title_cadastro">Cadastro</string>
+    <string name="title_login">Acessar Minha Conta</string>
+    <string name="title_cadastro">Cadastrar Usuario</string>
+
+    <!--tela login-->
+    <string name="hint_email_login">E-mail</string>
+    <string name="hint_senha_login">Senha</string>
+    <string name="btn_entrar">Entrar</string>
+
+    <!-- tela cadastro-->
+    <string name="hint_Nome_cadastro">Inserir Nome Completo</string>
+    <string name="hint_email_cadastro">Inserir E-mail</string>
+    <string name="hint_senha_cadastro">Insirir Senha</string>
+    <string name="btn_confirmar_cadastrar">Confirmar Cadastro</string>
+    <string name="textView_Fiscal_in_cadastro">Fiscal</string>
+    <string name="textView_Condutor_in_cadastro">Condutor</string>
+
+
+
 
 </resources>
