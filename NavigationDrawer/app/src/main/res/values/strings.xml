@@ -1,9 +1,16 @@
 <resources>
-    <string name="app_name">Navigation Drawer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="app_name">CGParking</string>
+    <string name="navigation_drawer_open">Abrir barra de menus</string>
+    <string name="navigation_drawer_close">Fechar barra de menus</string>
+    <string name="nav_header_title">CG Parking</string>
+    <string name="nav_header_subtitle">Sistema Zona Azul de Campina Grande-PB</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="TxtView_fragment_Conta">Minha Conta</string>
+    <string name="TxtView_fragment_carteira">Minha Carteira</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="TxtView_fragment_principal">Principal</string>
 </resources>
