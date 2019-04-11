@@ -18,7 +18,6 @@ import android.view.View;
 import com.pmcg.casalega_pmcg.R;
 import com.pmcg.casalega_pmcg.fragment.FormFragment;
 import com.pmcg.casalega_pmcg.fragment.PrincipalFragment;
-import com.pmcg.casalega_pmcg.fragment.ServicosFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -116,10 +115,11 @@ public class MainActivity extends AppCompatActivity
             enviarEmail();
 
         } else if (id == R.id.nav_servicos) {
-            ServicosFragment servicosFragment = new ServicosFragment();
+            /**ProgramaFragment programaFragment = new ProgramaFragment();
             FragmentTransaction fragTrans = getSupportFragmentManager().beginTransaction();
-            fragTrans.replace(R.id.frameContainer,servicosFragment);
-            fragTrans.commit();
+            fragTrans.replace(R.id.frameContainer,programaFragment);
+            fragTrans.commit();*/
+            startActivity(new Intent(this, ProgramaActivity.class));
 
         } else if (id == R.id.nav_sobre) {
             startActivity(new Intent(this, SobreActivity.class));
