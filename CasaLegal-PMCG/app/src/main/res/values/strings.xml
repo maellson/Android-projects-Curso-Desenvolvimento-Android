@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Casa Legal-PMCG</string>
+    <string name="nav_header_subtitle">observacampina@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">configurações</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="t1servicos">Regularização Fundiária</string>
+    <string name="conteudot1servicos">O Programa Casa Legal tem como objetivo promover a regularização fundiária, financeira e cadastral de ocupações que se encontram em situação irregular no município de Campina Grande-PB </string>
+    <string name="t2servicos">Benefícios</string>
+    <string name="conteudot2servicos">Transferir legalmente por venda;</string>
+    <string name="conteudot3servicos">Transferir legalmente o lote por herança.</string>
+    <string name="TextViewPrincipal">Regularização Fundiária e Cadastral</string>
+    <string name="descriptionImage">PMCG</string>
+</resources>
