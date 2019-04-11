@@ -23,8 +23,8 @@
                 android:title="Contato" />
             <item
                 android:id="@+id/nav_servicos"
-                android:icon="@drawable/ic_servicos24dp"
-                android:title="Serviços" />
+                android:icon="@drawable/ic_rules_black_24dp"
+                android:title="O programa" />
             <item
                 android:id="@+id/nav_sobre"
                 android:icon="@drawable/ic_sobre_24dp"

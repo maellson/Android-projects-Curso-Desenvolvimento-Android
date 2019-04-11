@@ -30,7 +30,7 @@ public class SobreActivity extends AppCompatActivity {
             .setImage(R.drawable.logo)
             .setDescription(descr)
             .addGroup("Fale Conosco")
-            .addEmail("observacampina@gmail.com","Envie um E-mail")
+            .addEmail("observacampina@gmail.com","Envie um e-mail")
             .addWebsite("http://www.observacampina.com.br","Conheça o Observatório")
             .addGroup("Redes Sociais")
                 .addInstagram("observacampina","Instagram")

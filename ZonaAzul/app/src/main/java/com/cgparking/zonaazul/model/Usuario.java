@@ -1,5 +1,9 @@
 package com.cgparking.zonaazul.model;
 
+import com.cgparking.zonaazul.control.ConfigFirebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
 public class Usuario {
 
     private String id;
@@ -11,6 +15,12 @@ public class Usuario {
 
     public Usuario() {
 
+    }
+    public void salvar(){
+        DatabaseReference firebaseRef = ConfigFirebase.getFirebaseDatabase();
+        DatabaseReference usuarios = firebaseRef.child("usuarios").child(getId());
+
+        usuarios.setValue(this);
     }
 
     public String getId() {
@@ -37,9 +47,10 @@ public class Usuario {
         this.email = email;
     }
 
+    @Exclude
     public String getSenha() {
         return senha;
-    }
+    }// A senha não está sendo salva
 
     public void setSenha(String senha) {
         this.senha = senha;

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">CASA LEGAL</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Casa Legal-PMCG</string>
@@ -16,4 +16,9 @@
     <string name="conteudot3servicos">Transferir legalmente o lote por herança.</string>
     <string name="TextViewPrincipal">Regularização Fundiária e Cadastral</string>
     <string name="descriptionImage">PMCG</string>
+    <string name="t3servicos">O que é a Regularização</string>
+    <string name="conteudo4servicos">Comprovar o direito de moradia</string>
+    <string name="conteudo5servicos">Facilitar o financiamento para construção ou reforma</string>
+    <string name="conteudo6servicos">É uma ação na qual a prefeitura atua para Legalizar a posse das pessoas nos locais onde elas estão morando há muito tempo, entregando o título (\"papel da casa\").</string>
+    <string name="conteudo7servicos">Escrituras Gratuitas</string>
 </resources>

@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".activity.RequisicoesActivity"></activity>
         <!-- Login -->
         <activity
             android:name=".activity.LoginActivity"
@@ -24,22 +24,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cgparking.zonaazul.activity.MainActivity" />
         </activity>
-
         <activity android:name=".activity.LerQRCodeActivity" />
         <activity android:name=".activity.CarteiraActivity" />
-        <activity android:name=".activity.CadastrarCartaoActivity" />
-
-        <!-- cadastro -->
-                <activity android:name=".activity.CadastrarUsuarioActivity"
-                    android:label="@string/title_cadastro"
-                    android:parentActivityName=".activity.MainActivity">
-                    <meta-data
-                        android:name="android.support.PARENT_ACTIVITY"
-                        android:value="com.cgparking.zonaazul.activity.MainActivity" />
-                </activity>
-
-
-                <activity android:name=".activity.MapsActivity" /> <!-- Modificação de Maelson -->
+        <activity android:name=".activity.CadastrarCartaoActivity" /> <!-- cadastro -->
+        <activity
+            android:name=".activity.CadastrarUsuarioActivity"
+            android:label="@string/title_cadastro"
+            android:parentActivityName=".activity.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cgparking.zonaazul.activity.MainActivity" />
+        </activity>
+        <activity android:name=".activity.MapsActivity" /> <!-- Modificação de Maelson -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
