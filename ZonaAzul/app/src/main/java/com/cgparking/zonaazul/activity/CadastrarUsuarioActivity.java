@@ -115,7 +115,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                       //Se usuario for condutor chama activity maps
                       //se nao chama activity requisicoes
 
-                      if(verificaTipoUsuario() == "condutor"){
+                      if(verificaTipoUsuario() == "Condutor"){
                           startActivity(new Intent(CadastrarUsuarioActivity.this,
                                   MapsActivity.class));
                           finish();

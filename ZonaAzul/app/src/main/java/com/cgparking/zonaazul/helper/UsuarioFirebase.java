@@ -1,21 +1,29 @@
 package com.cgparking.zonaazul.helper;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
+import com.cgparking.zonaazul.activity.MapsActivity;
+import com.cgparking.zonaazul.activity.RequisicoesActivity;
 import com.cgparking.zonaazul.control.ConfigFirebase;
+import com.cgparking.zonaazul.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 public class UsuarioFirebase {
 
     public static FirebaseUser getUsuarioAtual(){
         FirebaseAuth auth = ConfigFirebase.getFirebaseAutenticacao();
         return auth.getCurrentUser();
-
     }
 
     public static boolean atualizarNomeUsuario(String nome){
@@ -44,4 +52,44 @@ public class UsuarioFirebase {
 
     } //fim do atualizarNomeUsuario
 
+    public static void redirecionaUsuarioLogado(final Activity activity){
+        DatabaseReference usuariosRef = ConfigFirebase.getFirebaseDatabase()
+                .child("usuarios")
+                .child(getIdUsuario());
+
+        usuariosRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                Usuario usuario = dataSnapshot.getValue(Usuario.class);
+                String tipousuario = usuario.getTipo();
+
+                if (tipousuario.equals("Fiscal")){
+
+                   Intent intent  = new Intent(activity,
+                           RequisicoesActivity.class);
+                   activity.startActivity(intent);
+
+                } else {
+
+                    Intent intent  = new Intent(activity,
+                           MapsActivity.class);
+                    activity.startActivity(intent);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+    }
+
+    public static String getIdUsuario(){
+        return getUsuarioAtual().getUid();
+    }
 }//fim da classe
