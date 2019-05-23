@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.RequisicoesActivity"></activity>
-        <!-- Login -->
+        <activity
+            android:name=".activity.FiscalActivity"
+            android:label="@string/title_activity_fiscal_"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".activity.RequisicoesActivity" /> <!-- Login -->
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/title_login"
@@ -35,7 +40,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cgparking.zonaazul.activity.MainActivity" />
         </activity>
-        <activity android:name=".activity.MapsActivity" /> <!-- Modificação de Maelson -->
+        <!-- Modificação de Maelson -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

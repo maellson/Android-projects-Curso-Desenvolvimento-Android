@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.cgparking.zonaazul.activity.MapsActivity;
+import com.cgparking.zonaazul.activity.FiscalActivity;
 import com.cgparking.zonaazul.activity.RequisicoesActivity;
 import com.cgparking.zonaazul.control.ConfigFirebase;
 import com.cgparking.zonaazul.model.Usuario;
@@ -24,6 +24,18 @@ public class UsuarioFirebase {
     public static FirebaseUser getUsuarioAtual(){
         FirebaseAuth auth = ConfigFirebase.getFirebaseAutenticacao();
         return auth.getCurrentUser();
+    }
+
+    public static Usuario getDadosUsuarioLogado(){
+        FirebaseUser firebaseUser = getUsuarioAtual();
+        Usuario usuario = new Usuario();
+        usuario.setId(firebaseUser.getUid());
+        usuario.setNome(firebaseUser.getDisplayName());
+        usuario.setEmail(firebaseUser.getEmail());
+
+        return usuario;
+
+
     }
 
     public static boolean atualizarNomeUsuario(String nome){
@@ -53,41 +65,47 @@ public class UsuarioFirebase {
     } //fim do atualizarNomeUsuario
 
     public static void redirecionaUsuarioLogado(final Activity activity){
-        DatabaseReference usuariosRef = ConfigFirebase.getFirebaseDatabase()
-                .child("usuarios")
-                .child(getIdUsuario());
 
-        usuariosRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+        FirebaseUser user = getUsuarioAtual();
 
-                Usuario usuario = dataSnapshot.getValue(Usuario.class);
-                String tipousuario = usuario.getTipo();
+        if(user !=null){//VERIFICA SE O USUARIO ESTA LOGADO
 
-                if (tipousuario.equals("Fiscal")){
+            DatabaseReference usuariosRef = ConfigFirebase.getFirebaseDatabase()
+                    .child("usuarios")
+                    .child(getIdUsuario());
 
-                   Intent intent  = new Intent(activity,
-                           RequisicoesActivity.class);
-                   activity.startActivity(intent);
+            usuariosRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                } else {
+                    Usuario usuario = dataSnapshot.getValue(Usuario.class);
+                    String tipousuario = usuario.getTipo();
 
-                    Intent intent  = new Intent(activity,
-                           MapsActivity.class);
-                    activity.startActivity(intent);
+                    if (tipousuario.equals("Fiscal")){
+
+                        Intent intent  = new Intent(activity,
+                                FiscalActivity.class);
+                        activity.startActivity(intent);
+
+                    } else {
+
+                        Intent intent  = new Intent(activity,
+                                RequisicoesActivity.class);
+                        activity.startActivity(intent);
+
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
-            }
+            });
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+        }
 
 
-
-    }
+    }//Fim redirecionaUsuarioLogado()
 
     public static String getIdUsuario(){
         return getUsuarioAtual().getUid();

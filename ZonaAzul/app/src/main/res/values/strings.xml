@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ZonaAzul</string>
+    <string name="app_name">Zona Azul</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_login">Sign in</string>
     <!-- Strings related to login -->
@@ -20,9 +20,9 @@
 
     <!-- Titulos-->
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_sair">Sair</string>
+    <string name="title_notifications">Notificações</string>
     <string name="title_login">Acessar Minha Conta</string>
     <string name="title_cadastro">Cadastrar Usuario</string>
 
@@ -38,6 +38,7 @@
     <string name="btn_confirmar_cadastrar">Confirmar Cadastro</string>
     <string name="textView_Fiscal_in_cadastro">Fiscal</string>
     <string name="textView_Condutor_in_cadastro">Condutor</string>
+    <string name="title_activity_fiscal_">Fiscal_Activity</string>
 
 
 </resources>

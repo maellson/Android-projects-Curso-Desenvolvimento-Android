@@ -117,7 +117,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
                       if(verificaTipoUsuario() == "Condutor"){
                           startActivity(new Intent(CadastrarUsuarioActivity.this,
-                                  MapsActivity.class));
+                                  RequisicoesActivity.class));
                           finish();
 
                           Toast.makeText(CadastrarUsuarioActivity.this,
@@ -127,7 +127,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                       }//fim do if verifica TipoUsuario
                       else {
                           startActivity(new Intent(CadastrarUsuarioActivity.this,
-                                  RequisicoesActivity.class));
+                                  FiscalActivity.class));
                           finish();
 
                           Toast.makeText(CadastrarUsuarioActivity.this,
