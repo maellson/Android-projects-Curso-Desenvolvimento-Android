@@ -21,10 +21,10 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_fiscal_" />
+    <include layout="@layout/content_mapa" />
 
     <LinearLayout
-        android:id="@+id/linearFiscal"
+        android:id="@+id/linearDestinoFiscal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -70,7 +70,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonChamarUber"
         style="@style/botaoPadrao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

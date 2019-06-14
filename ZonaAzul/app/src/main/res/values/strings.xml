@@ -41,4 +41,10 @@
     <string name="title_activity_fiscal_">Fiscal_Activity</string>
 
 
+    <!--tela adapter_Requisicoes -->
+    <string name="tVAdapterNome">Maelson_condutor</string>
+    <string name="tVAdapterDistancia">Aproximadamente: 0 Km</string>
+    <string name="title_activity_corrida">Confirmar Corrida</string>
+
+
 </resources>

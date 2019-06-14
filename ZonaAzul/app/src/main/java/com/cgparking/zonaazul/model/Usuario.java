@@ -4,7 +4,9 @@ import com.cgparking.zonaazul.control.ConfigFirebase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
 
-public class Usuario {
+import java.io.Serializable;
+
+public class Usuario implements Serializable{
 
     private String id;
     private String nome;
@@ -16,7 +18,9 @@ public class Usuario {
     private String longitude;
 
 
-    public Usuario() {
+    public Usuario()
+
+    {
 
     }
     public void salvar(){

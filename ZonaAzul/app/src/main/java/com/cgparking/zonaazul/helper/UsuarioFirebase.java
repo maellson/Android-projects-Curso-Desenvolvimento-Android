@@ -68,7 +68,7 @@ public class UsuarioFirebase {
 
         FirebaseUser user = getUsuarioAtual();
 
-        if(user !=null){//VERIFICA SE O USUARIO ESTA LOGADO
+        if(user != null){//VERIFICA SE O USUARIO ESTA LOGADO
 
             DatabaseReference usuariosRef = ConfigFirebase.getFirebaseDatabase()
                     .child("usuarios")

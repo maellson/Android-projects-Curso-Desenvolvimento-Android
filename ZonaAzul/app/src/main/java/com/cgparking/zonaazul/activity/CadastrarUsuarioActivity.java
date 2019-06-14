@@ -101,6 +101,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
         ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
                 if(task.isSuccessful()){
                   try {
                       String idUsuario = task.getResult().getUser().getUid();
@@ -115,23 +116,23 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                       //Se usuario for condutor chama activity maps
                       //se nao chama activity requisicoes
 
-                      if(verificaTipoUsuario() == "Condutor"){
-                          startActivity(new Intent(CadastrarUsuarioActivity.this,
-                                  RequisicoesActivity.class));
-                          finish();
-
-                          Toast.makeText(CadastrarUsuarioActivity.this,
-                                  "Sucesso ao Cadastrar Condutor!",
-                                  Toast.LENGTH_SHORT).show();
-
-                      }//fim do if verifica TipoUsuario
-                      else {
+                      if(verificaTipoUsuario() == "Fiscal"){
                           startActivity(new Intent(CadastrarUsuarioActivity.this,
                                   FiscalActivity.class));
                           finish();
 
                           Toast.makeText(CadastrarUsuarioActivity.this,
                                   "Sucesso ao Cadastrar Fiscal!",
+                                  Toast.LENGTH_SHORT).show();
+
+                      }//fim do if verifica TipoUsuario
+                      else {
+                          startActivity(new Intent(CadastrarUsuarioActivity.this,
+                                  RequisicoesActivity.class));
+                          finish();
+
+                          Toast.makeText(CadastrarUsuarioActivity.this,
+                                  "Sucesso ao Cadastrar Condutor!",
                                   Toast.LENGTH_SHORT).show();
                       }
 

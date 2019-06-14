@@ -3,6 +3,9 @@ package com.cgparking.zonaazul.model;
 import com.cgparking.zonaazul.control.ConfigFirebase;
 import com.google.firebase.database.DatabaseReference;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Requisicao {
     private String idRequisicao;
     private String status;
@@ -71,4 +74,21 @@ public class Requisicao {
         // savar todos os dados do objeto Requisicoes no proprio firebase
         requisicoes.child(getIdRequisicao()).setValue(this);//this is the itself object referenced
     }
+
+    public void atualizar(){
+
+        DatabaseReference fireBaseRef = ConfigFirebase.getFirebaseDatabase();
+        DatabaseReference requisicoes = fireBaseRef.child("requisicoes");
+
+        DatabaseReference requisicao =  requisicoes.child(getIdRequisicao());
+
+        Map objeto  = new HashMap();
+        objeto.put("condutor",getCondutor());
+        objeto.put("status",getStatus());
+
+        requisicao.updateChildren(objeto);
+
+    }
+
+
 }
